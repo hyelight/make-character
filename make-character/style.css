@@ -1,0 +1,109 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    height: 100vh;
+    background: radial-gradient(circle, #534A39 0%, #262727 50%, #0A0B0F 100%);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.container{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: transparent;
+    display: flex;
+    animation: rotating 25s infinite, upAndDown 15s infinite, leftAndRight 25s infinite;
+}
+@keyframes rotating {
+    0%{
+        rotate: -360deg;
+    }
+    75%{
+        rotate: 200deg;
+    }
+    100%{
+        rotate: 360deg;
+    }
+}
+@keyframes upAndDown {
+    0%{
+        margin-top: 0;
+    }
+    25%{
+        margin-top: -100px;
+    }
+    50%{
+        margin-top: 0px;
+    }
+    75%{
+        margin-top: 100px;
+    }
+    100%{
+        margin-top: 0;
+    }
+}
+@keyframes leftAndRight {
+    0%{
+       left: 10%;
+    }
+    50%{
+        left: 90%;
+    }
+    100%{
+        left: 10%;
+    }
+}
+.back{
+    width: 25px;
+    height: 100px;
+    background-color: #EA1616;
+    border-radius: 15px 0 0 15px;
+}
+.full-body{
+    position: absolute;
+    top: -60%;
+    left: 90%;
+}
+.upper-body{
+    width: 100px;
+    height: 150px;
+    background-color: #EA1616;
+    border-radius: 40px 50px 0 0;
+}
+.upper-body .goggles{
+    width: 70px;
+    height: 40px;
+    background-color: #71D4EC;
+    border-radius: 20px 26px 10px 15px;
+    margin-left: 40px;
+    position: absolute;
+    top: 25px;
+    border-bottom: 8px solid #4B8094;
+}
+.goggles .light{
+    width: 35px;
+    height:10px;
+    background-color: #F6F2F4;
+    margin-left: 28px;
+    margin-top: 8px;
+    border-radius: 5px 10px 5px 5px;
+}
+.lower-body{
+    display: flex;
+    justify-content: space-between;
+}
+.left-leg, .right-leg{
+    width: 32px;
+    height: 40px;
+    background-color: #EA1616;
+    border-radius: 0 0 5px 5px;
+    position: absolute;
+    top: 145px;
+}
+.right-leg{
+    left: 68px;
+}
